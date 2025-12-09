@@ -1,6 +1,5 @@
 const express = require("express");
 const morgan = require("morgan");
-const cors = require("cors");
 
 const app = express();
 
@@ -13,7 +12,6 @@ app.use(
 );
 app.use(express.static('dist'));
 app.use(express.json());
-app.use(cors({origin: "http://localhost:5173"}));
 
 let notes = [
 	{
