@@ -11,6 +11,7 @@ app.use(
 		":method :url :status :res[content-length] - :response-time ms :body"
 	)
 );
+app.use(express.static('dist'));
 app.use(express.json());
 app.use(cors({origin: "http://localhost:5173"}));
 
