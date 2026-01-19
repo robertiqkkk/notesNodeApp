@@ -1,0 +1,10 @@
+services:
+  mongo_test:
+    image: mongo:6.0
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_DATABASE=test_db
+    volumes:
+      # This performs the "Snapshot" import on startup
+      - ./tests/seed/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
