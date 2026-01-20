@@ -11,7 +11,7 @@ afterAll(async () => {
 });
 
 describe("GET /notes", () => {
-	it("should return the blogs from the Docker snapshot", async () => {
+	it("should return the notes from the Docker snapshot", async () => {
 		const response = await request(app).get("/api/notes");
 
 		expect(response.statusCode).toBe(200);

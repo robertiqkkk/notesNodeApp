@@ -1,9 +1,9 @@
 // tests/seed/init-mongo.js
 db = db.getSiblingDB("test_db"); // Switch to the test database
 
-db.createCollection("blogs");
+db.createCollection("notes");
 
-db.blogs.insertMany([
+db.notes.insertMany([
 	{
 		content: "HTML is easy",
 		important: true,

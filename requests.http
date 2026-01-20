@@ -1,0 +1,47 @@
+GET http://localhost:3003/api/notes HTTP/1.1
+
+***
+
+GET http://localhost:3003/api/notes/{id} HTTP/1.1
+
+***
+
+POST http://localhost:3001/api/notes HTTP/1.1
+content-type: application/json
+
+{
+	"content": "A short and poor note",
+	"important": true,
+    "userId": "696e6822a4f9d8a3ed19f63d"
+}
+
+***
+
+DELETE http://localhost:3003/api/notes/{id} HTTP/1.1
+
+***
+
+PUT http://localhost:3003/api/notes/694c321940c6a397268d1bda HTTP/1.1
+content-type: application/json
+
+{
+    "author": "Roberto",
+    "likes": 999,
+    "title": "My Second Blog",
+    "url": "https://google.com"
+}
+
+***
+
+GET http://localhost:3001/api/users HTTP/1.1
+
+***
+
+POST http://localhost:3001/api/users HTTP/1.1
+content-type: application/json
+
+{
+	"username": "mySecondUser",
+	"name": "Second User",
+    "password": "verySecretPassword"
+}
