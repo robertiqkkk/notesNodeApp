@@ -8,11 +8,11 @@ GET http://localhost:3003/api/notes/{id} HTTP/1.1
 
 POST http://localhost:3001/api/notes HTTP/1.1
 content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRlc3RVc2VyIiwiaWQiOiI2OTZmYjdmNjJlZmJjMmRhMmM1YzExOTQiLCJpYXQiOjE3Njg5Mjk3NTV9.Sr2U2xyMBDc4oQSpj9yWMeF7OsEnDJX0RCrgz6xRai4
 
 {
-	"content": "A short and poor note",
-	"important": true,
-    "userId": "696e6822a4f9d8a3ed19f63d"
+	"content": "Note with the token",
+	"important": true
 }
 
 ***
@@ -41,7 +41,17 @@ POST http://localhost:3001/api/users HTTP/1.1
 content-type: application/json
 
 {
-	"username": "mySecondUser",
-	"name": "Second User",
-    "password": "verySecretPassword"
+	"username": "TestUser",
+	"name": "Test User",
+    "password": "password"
+}
+
+***
+
+POST http://localhost:3001/api/login HTTP/1.1
+content-type: application/json
+
+{
+	"username": "TestUser",
+    "password": "password"
 }
